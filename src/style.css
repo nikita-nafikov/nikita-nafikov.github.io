@@ -37,7 +37,7 @@ body {
   line-height: 48px;
   margin: 0;
   padding-left: 70px;
-  padding-top: 70px;
+  padding-right: 70px;
   display: flex;
   flex-direction: column;
   justify-content: center;
