@@ -159,7 +159,6 @@ export const timeTableDayFirst = [
             }
         }
     },
-
     {
         'id': '10',
         'date': {
