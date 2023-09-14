@@ -26,6 +26,10 @@
   font-style: italic;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 body {
   font-family: 'Gotham', sans-serif;
   font-weight: 400;
@@ -70,7 +74,7 @@ body {
   min-width: 935px;
   border: 2px solid #DDAFF299;
   border-radius: 60px;
-  padding: 50px 40px;
+  padding: 30px 40px;
   box-shadow: 3px 6px 8px 0px #36007A59;
   box-shadow: -3px -4px 11px 0px #6A01BC26;
   position: relative;
