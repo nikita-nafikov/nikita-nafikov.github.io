@@ -41,6 +41,7 @@ body {
 
 .conf{
   display: flex;
+  justify-content: center;
 }
 
 .conf__halls{
@@ -65,8 +66,8 @@ body {
   column-gap: 16px;
   align-items: center;
   justify-content: space-between;
-  max-width: 1200px;
-  min-width: 1200px;
+  max-width: 935px;
+  min-width: 935px;
   border: 2px solid #DDAFF299;
   border-radius: 60px;
   padding: 50px 40px;
@@ -105,7 +106,7 @@ body {
 .conf__timings{
   display: flex;
   flex-direction: column;
-  min-width: 813px;
+  min-width: 713px;
 }
 
 .conf__timing-wrapper{
