@@ -38,7 +38,7 @@ export const timeTableDayFirst = [
                 'picture': images.ConfImg
             }
         }
-    }
+    },
 
     {
         'id': '4',
