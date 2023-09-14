@@ -39,6 +39,8 @@ body {
   padding: 70px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   min-height: 100vh;
   background: linear-gradient(109.03deg, #7D00DF 4.73%, #1E0554 98.29%);
 }
