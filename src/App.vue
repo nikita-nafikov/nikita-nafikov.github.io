@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import {onMounted, ref} from "vue";
-import {timeTableDayFirst} from "./mocks/mocks.js";
+import {timeTableEvents} from "./mocks/mocks.js";
 import {images} from './assets/image'
 
 const currentTime = ref<string>('')
@@ -16,16 +16,16 @@ onMounted(() => {
   setInterval(() => {
     const date = new Date()
     currentTime.value = date.toLocaleTimeString()
-
     checkCurrentEvent(currentTime.value)
-  }, 600)
+  }, 60000)
 })
 
 const checkCurrentEvent = (time) => {
   const formattedTime = time.slice(0, 5)
-  for (let i = 0; i < timeTableDayFirst.length; i += 4){
+  console.log(formattedTime);
+  for (let i = 0; i < timeTableEvents.value.length; i += 4){
 
-    const slicedTable = timeTableDayFirst.slice(i, i + 4)
+    const slicedTable = timeTableEvents.value.slice(i, i + 4)
     for (let j = 0; j < slicedTable.length; j++){
       if(formattedTime >= slicedTable[j].date.from && formattedTime < slicedTable[j].date.to){
         // console.log(j)

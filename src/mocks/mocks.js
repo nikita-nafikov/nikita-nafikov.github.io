@@ -1,6 +1,8 @@
+import {ref} from "vue";
 import {images} from "../assets/image";
 
-export const timeTableDayFirst = [
+
+const timeTableDayFirst = [
     {
         'id': '1',
         'date': {
@@ -242,7 +244,7 @@ export const timeTableDayFirst = [
 
 ]
 
-export const timeTableDaySecond = [
+const timeTableDaySecond = [
     {
         'id': '1',
         'date': {
@@ -435,109 +437,24 @@ export const timeTableDaySecond = [
     },
 ]
 
+export const timeTableEvents = ref([])
 
+const checkCurrentDay = (day) => {
+    if (day === 15){
+        timeTableEvents.value = timeTableDayFirst
+    }
+    if(day === 16){
+        timeTableEvents.value = timeTableDaySecond
+    }
 
+}
 
+const date = new Date()
+const day = date.getDate()
+checkCurrentDay(day)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// setInterval()
-
-
-// export const a = {
-//     get b  () {
-//         return
-//     }
-// }
-
-// export const timeTableDayFirst:ITimeTable[] = [
-//     {
-//         'id': '5',
-//         'date': {
-//             'from': '18:58',
-//             'to': '18:59'
-//         },
-//         'events': {
-//             'firstHall': {
-//                 'speaker-name': '',
-//                 'event-title': 'Кофебрейк',
-//                 'picture': images.CoffeFirst
-//             },
-//             'secondHall': {
-//                 'speaker-name': '',
-//                 'event-title': 'Кофебрейк',
-//                 'picture': images.CoffeFirst
-//             }
-//         }
-//     },
-//
-//     {
-//         'id': '6',
-//         'date': {
-//             'from': '19:01',
-//             'to': '19:05'
-//         },
-//         'events': {
-//             'firstHall': {
-//                 'speaker-name': 'Расул Идиятулов',
-//                 'event-title': 'Разработчики пользовательских интерфейсов: "старая школа" vs "новая школа". Решаемые задачи, развитие, чему стоит поучиться друг у друга',
-//                 'picture': images.Idiatulov
-//             },
-//             'secondHall': {
-//                 'speaker-name': 'Максим Абдулхаликов',
-//                 'event-title': 'Подход TAGES к услугам Яндекса',
-//                 'picture': images.Abdulhalilov
-//             }
-//         }
-//     },
-//     {
-//         'id': '5',
-//         'date': {
-//             'from': '19:00',
-//             'to': '19:09'
-//         },
-//         'events': {
-//             'firstHall': {
-//                 'speaker-name': '',
-//                 'event-title': 'Кофебрейк',
-//                 'picture': images.CoffeFirst
-//             },
-//             'secondHall': {
-//                 'speaker-name': '',
-//                 'event-title': 'Кофебрейк',
-//                 'picture': images.CoffeFirst
-//             }
-//         }
-//     },
-//     {
-//         'id': '5',
-//         'date': {
-//             'from': '19:03',
-//             'to': '19:10'
-//         },
-//         'events': {
-//             'firstHall': {
-//                 'speaker-name': '',
-//                 'event-title': 'Кофебрейк',
-//                 'picture': images.CoffeFirst
-//             },
-//             'secondHall': {
-//                 'speaker-name': '',
-//                 'event-title': 'Кофебрейк',
-//                 'picture': images.CoffeFirst
-//             }
-//         }
-//     },
-// ]
+setInterval(() => {
+    const date = new Date()
+    const day = date.getDate()
+    checkCurrentDay(day)
+}, 1800000)
