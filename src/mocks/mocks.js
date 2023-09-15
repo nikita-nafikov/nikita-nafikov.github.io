@@ -6,7 +6,7 @@ const timeTableDayFirst = [
     {
         'id': '1',
         'date': {
-            'from': '9:30',
+            'from': '09:30',
             'to': '10:30'
         },
         'events': {
